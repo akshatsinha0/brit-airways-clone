@@ -1,0 +1,124 @@
+.ba-footer {
+    background: #0b2338;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    padding: 48px 0 0 0;
+    width: 100%;
+  }
+  
+  .ba-footer__main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+  
+  .ba-footer__columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    justify-content: flex-start;
+  }
+  
+  .ba-footer__col {
+    flex: 1 1 180px;
+    min-width: 170px;
+  }
+  
+  .ba-footer__col h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #fff;
+  }
+  
+  .ba-footer__col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .ba-footer__col ul li {
+    margin-bottom: 10px;
+  }
+  
+  .ba-footer__col ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    transition: color 0.2s;
+    font-weight: 400;
+  }
+  
+  .ba-footer__col ul li a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+  
+  .ba-footer__divider {
+    border: none;
+    border-top: 1px solid #2a3a4b;
+    margin: 36px 0 24px 0;
+  }
+  
+  .ba-footer__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-bottom: 24px;
+  }
+  
+  .ba-footer__brand {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+  
+  .ba-footer__brand img {
+    width: 60px;
+    height: auto;
+    vertical-align: middle;
+  }
+  
+  .ba-footer__brand span {
+    color: #e0e0e0;
+    font-size: 15px;
+  }
+  
+  .ba-footer__socials {
+    display: flex;
+    gap: 22px;
+  }
+  
+  .ba-footer__socials a {
+    color: #fff;
+    font-size: 22px;
+    transition: color 0.2s;
+  }
+  
+  .ba-footer__socials a:hover {
+    color: #3468ad;
+  }
+  
+  .ba-footer__locale a {
+    color: #e0e0e0;
+    text-decoration: underline;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  @media (max-width: 900px) {
+    .ba-footer__columns {
+      flex-wrap: wrap;
+      gap: 32px;
+    }
+    .ba-footer__bottom {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+  }
+  

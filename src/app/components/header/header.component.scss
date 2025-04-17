@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -335,104 +337,230 @@ html, body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 800px; /* Increased height to allow form to be half in/half out */
   z-index: -1;
   background-image: url('/assests/images/bg.png');
   background-size: cover;
   background-position: center;
-  opacity: 0.8;
 }
 
-@media (max-width: 1400px) {
-  .search-input-container {
-    margin-right: 50px;
-  }
+.flight-search-section {
+  position: relative;
+  width: 100%;
+  margin-top: 677px;
+  padding-top: 0;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 16px;
 }
-
-@media (max-width: 1200px) {
-  .header-container,
-  .dropdown-menu,
-  .search-dropdown-content {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-  
-  .dropdown-section {
-    min-width: 180px;
-  }
-  
-  .login-button {
-    margin-right: 20px;
-  }
+.flight-search-container {
+  max-width: 1200px;
+  width: 94%;
+  margin: -120px auto 0 auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  position: relative;
+  z-index: 2;
+  padding-bottom: 32px;
 }
-
-@media (max-width: 992px) {
-  .dropdown-menu {
+.booking-tabs {
+  display: flex;
+  border-bottom: 1.5px solid #e0e0e0;
+  background: #fff;
+  font-family: 'Montserrat', sans-serif;
+}
+.tab {
+  display: flex;
+  align-items: center;
+  padding: 18px 30px 10px 30px;
+  font-size: 17px;
+  color: #304564;
+  cursor: pointer;
+  border-bottom: 2.5px solid transparent;
+  background: #fff;
+  font-weight: 500;
+  transition: color 0.2s, border-bottom 0.2s;
+}
+.tab.active {
+  color: #3468ad;
+  border-bottom: 2.5px solid #3468ad;
+  background: #f5f9ff;
+}
+.tab-icon {
+  width: 22px;
+  height: 22px;
+  margin-right: 10px;
+}
+.flight-search-form {
+  padding: 32px 32px 0 32px;
+  background: #fff;
+  border-radius: 0 0 16px 16px;
+  font-family: 'Montserrat', sans-serif;
+}
+.form-row {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 18px;
+}
+.form-group {
+  flex: 1;
+  min-width: 0;
+}
+label {
+  color: #304564;
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 7px;
+  font-family: 'Montserrat', sans-serif;
+  display: block;
+}
+.form-control {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid #d7dbe6;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #304564;
+  background: #fff;
+  font-family: 'Montserrat', sans-serif;
+  transition: border-color 0.2s;
+  outline: none;
+  box-shadow: none;
+}
+.form-control:focus {
+  border-color: transparent;
+  outline: 2.5px solid #3468ad;
+  outline-offset: 3px;
+}
+.form-control::placeholder {
+  color: #304564;
+  opacity: 1;
+  font-family: 'Montserrat', sans-serif;
+}
+.select-wrapper {
+  position: relative;
+}
+.custom-select {
+  appearance: none;
+  -webkit-appearance: none;
+  background: #fff;
+  color: #304564;
+}
+.custom-select:focus {
+  border-color: transparent;
+  outline: 2.5px solid #3468ad;
+  outline-offset: 3px;
+}
+.custom-select::-ms-expand {
+  display: none;
+}
+.select-wrapper::after {
+  content: '';
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  width: 18px;
+  height: 18px;
+  background: url('/assests/images/downwararrow.png') no-repeat center/contain;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+.date-input-wrapper {
+  position: relative;
+}
+.custom-date-picker {
+  padding-right: 40px;
+}
+.calendar-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  width: 22px;
+  height: 22px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 18px;
+}
+.find-flights-button {
+  background: #3468ad;
+  color: #fff;
+  font-size: 17px;
+  font-family: 'Montserrat', sans-serif;
+  border: none;
+  border-radius: 6px;
+  padding: 13px 36px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(52,104,173,0.08);
+  transition: background 0.2s;
+}
+.find-flights-button:hover {
+  background: #254b84;
+}
+.inspiration-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin: 36px auto 0 auto;
+  max-width: 1200px;
+  width: 94%;
+  font-family: 'Montserrat', sans-serif;
+  color: #304564;
+  font-size: 16px;
+}
+.inspiration-label {
+  margin-right: 12px;
+  color: #304564;
+  font-weight: 500;
+}
+.inspiration-link {
+  color: #3468ad;
+  text-decoration: underline;
+  font-size: 16px;
+  margin-right: 24px;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.2s;
+}
+.inspiration-link:hover {
+  color: #254b84;
+}
+.external-link-icon, .arrow-link-icon {
+  margin-left: 5px;
+  vertical-align: middle;
+}
+@media (max-width: 1000px) {
+  .flight-search-container {
+    width: 98%;
+    padding-bottom: 18px;
+  }
+  .flight-search-form {
+    padding: 18px 8px 0 8px;
+  }
+  .form-row {
     flex-direction: column;
+    gap: 12px;
   }
-  
-  .dropdown-section {
-    width: 100%;
-    margin-bottom: 20px;
+  .form-group {
+    min-width: 0;
   }
-  
-  .search-dropdown-content {
+  .inspiration-links {
     flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
   }
-  
-  .search-input-container {
+}
+@media (max-width: 600px) {
+  .booking-tabs {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .flight-search-container {
     width: 100%;
-    margin-right: 0;
-    margin-bottom: 15px;
-  }
-  
-  .nav-item {
-    margin-right: 15px;
-  }
-}
-
-@media (max-width: 768px) {
-  .nav-menu {
-    display: none;
-  }
-  
-  .logo-container {
-    position: relative;
-    left: 0;
-    transform: none;
-  }
-  
-  .header-container {
-    justify-content: space-between;
-    padding: 0 20px;
-  }
-  
-  .logo {
-    width: 180px;
-  }
-  
-  .dropdown-menu,
-  .search-dropdown {
-    display: none !important;
-  }
-  
-  .login-button {
-    padding: 8px 20px;
-    margin-right: 10px;
-  }
-}
-
-@media (max-width: 480px) {
-  .header-container {
-    padding: 0 10px;
-  }
-  
-  .login-button {
-    padding: 6px 15px;
-    font-size: 12px;
-  }
-  
-  .search-button {
-    padding: 10px 15px;
+    border-radius: 0;
   }
 }
